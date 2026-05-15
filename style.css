@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(9, 1, 32);
+    color: white;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    backdrop-filter: blur(12px);
+    background-color: #0000006b;
+    z-index: 1000;
+}
+
+.logo { font-size: 30px; font-weight: 700; color: #00f7ff; }
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover { color: #00f7ff; }
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Typing Animation */
+.men {
+    font-size: 45px;
+    color: #00f7ff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 3px solid #00f7ff ;
+    animation: typing 3.5s steps(20) infinite, blink .5s step-end infinite;
+}
+
+@keyframes typing { 0%, 100% { width: 0 } 50% { width: 100% } }
+@keyframes blink { from, to { border-color: transparent } 50% { border-color: #00f7ff } }
+
+.hero__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.my__img {
+    border: 5px solid #00f7ff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+}
+
+/* Card Design */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.content {
+    padding-right: 50px; /* Masofa me'yoriga keltirildi */
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Rasmlar chiroyli chiqishi uchun */
+.card-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.card-content a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.4s ease;
+}
+
+.card-content img:hover {
+    transform: scale(1.1);
+}
+
+/* Neon Effect */
+.card::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    background-image: linear-gradient(180deg,  #00b7ff, #ff0000);
+    height: 150%;
+    animation: rotBGimg 3s linear infinite;
+    z-index: 1;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    background: #1e293b;
+    inset: 5px;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+@keyframes rotBGimg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.title { font-size: 40px; margin-bottom: 20px; color: #e2e8f0; }
+.text, .about-text { max-width: 800px; color: #8892b0; font-size: 18px; margin-bottom: 20px; }
+
+/* Klass to'g'rilandi (. nuqta qo'yildi) */
+.men__men {
+    padding-top: 20px;
+}
+
+
+/* Header o'zgarishsiz qoladi, lekin section paddingini to'g'rilaymiz */
+header {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    backdrop-filter: blur(12px);
+    background-color: #0000006b;
+    z-index: 1000;
+}
+
+/* Sections: Birinchi section header tagida qolib ketmasligi uchun padding-top ni oshirdik */
+section {
+    min-height: 100vh;
+    padding: 140px 10% 80px 10%; /* Yuqori padding 100px dan 140px ga oshirildi */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hero Wrapper: Ism va rasm orasini maksimal ochish uchun justify-content o'zgartirildi */
+.hero__wrapper {
+    display: flex;
+    justify-content: space-between; /* Elementlarni ikki chetga suradi */
+    align-items: center;
+    gap: 50px;
+    width: 100%; /* To'liq kenglikda ishlashi uchun */
+    max-width: 1200px; /* Katta ekranlarda juda uzoqlashib ketmasligi uchun */
+    flex-wrap: wrap;
+}
+
+/* Kontent matni chapga tekislansa, vizualroq chiroyli chiqadi */
+.content {
+    flex: 1; /* Mavjud joyni egallaydi */
+    text-align: left; /* Ism va matnni chapga tekislaydi */
+    min-width: 300px; /* Mobil ekranlarda siqilib ketmasligi uchun */
+}
+
+/* Typing Animation */
+.men {
+    font-size: 45px;
+    color: #00f7ff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 3px solid #00f7ff ;
+    animation: typing 3.5s steps(20) infinite, blink .5s step-end infinite;
+}   
