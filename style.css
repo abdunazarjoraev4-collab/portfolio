@@ -328,3 +328,110 @@ img {
 .logo_list{
     color: rgb(0, 102, 255);
 }
+/* Oilaviy katta rasm dizayni */
+.family-main-card {
+    width: 530px !important; /* Kichik kartalardan 2 baravar kengroq */
+    height: 300px;
+    order: -1; /* Har doim birinchi bo'lib ko'rinishini ta'minlaydi */
+}
+
+/* Katta karta ichidagi rasm to'liq va chiroyli joylashishi uchun */
+.family-main-card .card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rasm cho'zilib ketmasdan kartani to'ldirib turadi */
+    border-radius: 15px;
+}
+
+/* Katta rasmning orqa fon aylanuvchi chizig'iga o'ziga xos ranglar beramiz (Neon uslubida) */
+.family-main-card::before {
+    position: absolute;
+    width: 200px;
+    background-image: linear-gradient(180deg, #00f7ff, #00ff88); 
+    height: 150%;
+    animation: rotBGimg 3s linear infinite;
+    z-index: 1;
+}
+
+.family-main-card::after {
+    content: "";
+    position: absolute;
+    background: #0a1120 !important; 
+    inset: 5px;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+/* Mobil telefonlar va planshetlar uchun moslashuvchanlik (Responsive) */
+@media (max-width: 600px) {
+    .family-main-card {
+        width: 100% !important; /* Ekran kichrayganda telefon kengligiga moslashadi */
+        height: 250px;
+    }
+}
+.oimam{
+    display: grid;
+}
+/* Oilam bo'limi uchun maxsus konteyner */
+.family-container {
+    display: flex;
+    flex-direction: column; /* Elementlarni ustma-ust (tepa va pastga) joylashtiradi */
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* 1. Tepadagi Katta oilaviy rasm dizayni */
+.family-main-card {
+    width: 600px !important; /* Kengligini chiroyli ko'rinishi uchun biroz kattalashtirdik */
+    height: 350px !important;
+}
+
+/* Katta rasmning o'zida ham qonuniy hover (nom chiqishi) ishlashi uchun */
+.family-main-card:hover .name-tag {
+    transform: translateX(-50%) rotateX(0deg); 
+    opacity: 1;
+}
+
+.family-main-card .card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rasm cho'zilmasdan kartani to'ldiradi */
+    border-radius: 15px;
+}
+
+/* Katta rasmning aylanuvchi neon chizig'i */
+.family-main-card::before {
+    position: absolute;
+    width: 250px;
+    background-image: linear-gradient(180deg, #00f7ff, #00ff88); 
+    height: 150%;
+    animation: rotBGimg 3s linear infinite;
+    z-index: 1;
+}
+
+.family-main-card::after {
+    content: "";
+    position: absolute;
+    background: #0a1120 !important; 
+    inset: 5px;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+/* 2. Pastki qismdagi amakilar guruhi uchun joylashuv */
+.family-sub-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Mobil telefonlar ekraniga moslashtirish (Responsive) */
+@media (max-width: 650px) {
+    .family-main-card {
+        width: 100% !important; /* Telefon ekranida chetga chiqib ketmaydi */
+        height: 230px !important;
+    }
+}
