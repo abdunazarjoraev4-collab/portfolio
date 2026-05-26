@@ -7,13 +7,12 @@
 }
 
 body {
-    background-color: rgb(9, 1, 32);
+    background: linear-gradient(to right, rgb(78, 115, 125, 0.99), rgba(1, 36, 42, 0.99) );
     color: white;
     overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Header */
 header {
     position: fixed;
     top: 0; 
@@ -27,7 +26,11 @@ header {
     z-index: 1000;
 }
 
-.logo { font-size: 30px; font-weight: 700; color: #00f7ff; }
+.logo { 
+    font-size: 30px; 
+    font-weight: 700; 
+    color: #00f7ff; 
+}
 
 nav a {
     text-decoration: none;
@@ -36,12 +39,13 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover { color: #00f7ff; }
+nav a:hover { 
+    color: #00f7ff; 
+}
 
-/* Sections */
 section {
     min-height: 100vh;
-    padding: 100px 10%;
+    padding: 140px 10% 80px 10%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,45 +53,53 @@ section {
     text-align: center;
 }
 
-/* Typing Animation */
-.men {
-    font-size: 45px;
-    color: #00f7ff;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    border-right: 3px solid #00f7ff ;
-    animation: typing 3.5s steps(20) infinite, blink .5s step-end infinite;
-}
-
-@keyframes typing { 0%, 100% { width: 0 } 50% { width: 100% } }
-@keyframes blink { from, to { border-color: transparent } 50% { border-color: #00f7ff } }
-
 .hero__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+    width: 100%;
+    max-width: 1200px;
     flex-wrap: wrap;
 }
 
+.content {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+}
+
+.men {
+    font-size: 50px;
+    color: #00f7ff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 2s steps(20) infinite, blink .10s step-end infinite;
+}
+
+@keyframes typing { 0%, 100% { width: 0 } 50% { width: 100% } }
+@keyframes blink { from, to { border-color: transparent } 50% { border-color: #00f7ff } }
+
+.men__men {
+    color:rgba(2, 223, 243, 0.99) ;
+    padding-top: 20px;
+}
+
 .my__img {
+    width: 350px;
+    height: 500px;
     border: 5px solid #00f7ff;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
 }
 
-/* Card Design */
 .cards {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
     margin-top: 40px;
-}
-
-.content {
-    padding-right: 50px; /* Masofa me'yoriga keltirildi */
 }
 
 .card {
@@ -101,7 +113,6 @@ section {
     border-radius: 20px;
 }
 
-/* Rasmlar chiroyli chiqishi uchun */
 .card-content {
     position: relative;
     z-index: 10;
@@ -132,12 +143,11 @@ section {
     transform: scale(1.1);
 }
 
-/* Neon Effect */
 .card::before {
     content: '';
     position: absolute;
     width: 150px;
-    background-image: linear-gradient(180deg,  #00b7ff, #ff0000);
+    background-image: linear-gradient(180deg, #00b7ff, #ff0000);
     height: 150%;
     animation: rotBGimg 3s linear infinite;
     z-index: 1;
@@ -157,65 +167,164 @@ section {
     to { transform: rotate(360deg); }
 }
 
-.title { font-size: 40px; margin-bottom: 20px; color: #e2e8f0; }
-.text, .about-text { max-width: 800px; color: #8892b0; font-size: 18px; margin-bottom: 20px; }
-
-/* Klass to'g'rilandi (. nuqta qo'yildi) */
-.men__men {
-    padding-top: 20px;
+.title { 
+    font-size: 40px; 
+    margin-bottom: 20px; 
+    color: #e2e8f0; 
 }
 
+.text, .about-text { 
+    max-width: 800px; 
+    color: #8892b0; 
+    font-size: 18px; 
+    margin-bottom: 20px; 
+}
 
-/* Header o'zgarishsiz qoladi, lekin section paddingini to'g'rilaymiz */
-header {
-    position: fixed;
-    top: 0; 
+.name-tag {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) rotateX(-90deg); 
+    transform-origin: top; 
+    background: #00ff88;
+    color: #000;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 0 0 10px 10px; 
+    box-shadow: 0 10px 20px rgba(0, 255, 136, 0.4);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none; 
+}
+
+.friend-card:hover .name-tag {
+    transform: translateX(-50%) rotateX(0deg); 
+    opacity: 1;
+}
+
+.friend-card:hover .name-tag::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    backdrop-filter: blur(12px);
-    background-color: #0000006b;
-    z-index: 1000;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 0 15px #fff;
 }
 
-/* Sections: Birinchi section header tagida qolib ketmasligi uchun padding-top ni oshirdik */
-section {
-    min-height: 100vh;
-    padding: 140px 10% 80px 10%; /* Yuqori padding 100px dan 140px ga oshirildi */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.friend-card::before {
+    position: absolute;
+    width: 150px;
+    background-image: linear-gradient(180deg, #00ff88, #bd00ff); 
+    height: 150%;
+    animation: rotBGimg 3s linear infinite;
+    z-index: 1;
 }
 
-/* Hero Wrapper: Ism va rasm orasini maksimal ochish uchun justify-content o'zgartirildi */
-.hero__wrapper {
+.friend-card::after {
+    content: "";
+    position: absolute;
+    background: #0a1120 !important; 
+    inset: 5px;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.dos__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+img {
+    width: 200px;
+    border-radius: 40px;
+}
+
+#contact .cards {
     display: flex;
-    justify-content: space-between; /* Elementlarni ikki chetga suradi */
-    align-items: center;
-    gap: 50px;
-    width: 100%; /* To'liq kenglikda ishlashi uchun */
-    max-width: 1200px; /* Katta ekranlarda juda uzoqlashib ketmasligi uchun */
     flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
 }
 
-/* Kontent matni chapga tekislansa, vizualroq chiroyli chiqadi */
-.content {
-    flex: 1; /* Mavjud joyni egallaydi */
-    text-align: left; /* Ism va matnni chapga tekislaydi */
-    min-width: 300px; /* Mobil ekranlarda siqilib ketmasligi uchun */
+#contact .card {
+    height: 250px !important; 
 }
 
-/* Typing Animation */
-.men {
-    font-size: 45px;
-    color: #00f7ff;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    border-right: 3px solid #00f7ff ;
-    animation: typing 3.5s steps(20) infinite, blink .5s step-end infinite;
-}   
+#contact .card-content {
+    flex-direction: column !important; 
+    justify-content: space-between !important;
+    padding: 45px 20px 20px 20px !important;
+    text-align: center;
+    color: #ccd6f6;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+.contact-icon {
+    font-size: 50px;
+    margin-bottom: 5px;
+    display: inline-block;
+    filter: drop-shadow(0 0 8px rgba(0, 247, 255, 0.3));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#contact .card:hover .contact-icon {
+    transform: scale(1.2) translateY(-5px);
+}
+
+#contact .card-content a {
+    width: 90%;
+    height: auto;
+    padding: 10px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .card:nth-child(1) .card-content a {
+    background: linear-gradient(135deg, #229ED9, #0088cc); 
+    color: #ffffff !important;
+}
+
+#contact .card:nth-child(2) .card-content a {
+    background: linear-gradient(135deg, #00ff88, #00b359); 
+    color: #000000 !important;
+}
+
+#contact .card:nth-child(3) .card-content a {
+    background: linear-gradient(135deg, #ff3366, #ff0044); 
+    color: #ffffff !important;
+}
+
+#contact .card-content a:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 247, 255, 0.4);
+    filter: brightness(1.2);
+}
+
+
+
+
+
+
+.logo_list{
+    color: rgb(0, 102, 255);
+}

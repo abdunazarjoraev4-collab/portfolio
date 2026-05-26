@@ -10,39 +10,37 @@
     <header>
         <div class="logo">Bilolbek</div>
         <nav>
-            <a href="#home">Bosh sahifa</a>
-            <a href="#about">Men haqimda</a>
-            <a href="#projects">Loyihalarim</a>
-            <a href="#family">Oilam</a>
-            <a href="#school">Maktabim</a>  
+            <a href="#home" class="logo_list">Bosh sahifa</a>
+            <a href="#about" class="logo_list">Men haqimda</a>
+            <a href="#projects" class="logo_list">Loyihalarim</a>
+            <a href="#family" class="logo_list">Oilam</a>
+            <a href="#school" class="logo_list">Do'stlarim</a>  
+            <a href="#ustozlarim" class="logo_list">Ustozlarim</a>  
+            <a href="#contact" class="logo_list">Bog'lanish uchun</a>  
         </nav>
     </header>
 
     <div class="terminal-container">
         <p id="typing-text"></p>
     </div>
-    <script src="app.js"></script>
 
-    <!-- Home Section -->
     <section class="hero" id="home">
         <div class="hero__wrapper">
             <div class="content">
                 <h1 class="men">Abdunazarov Bilolbek</h1>
-                <p class="men__men">Assalomu alaykum, mening saytimga xush kelibsiz!</p>
+                <h2 class="men__men">Assalomu alaykum, mening saytimga xush kelibsiz!</h2>
             </div>
             <img src="image.png" class="my__img" width="400" alt="Bilolbek" />
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <h2 class="title">Men Haqimda</h2>
         <p class="about-text">
-            Men Abdunazarov Bilolbek Azizbek o'g'li, 2012-yil Farg'onada tug'ilganman. 
+            Men Abdunazarov Bilolbek Azizbek o'g'li, 2012-yilda Farg'onada tug'ilganman. 
             Hozirda Frontend dasturlash yo'nalishida HTML, CSS va JavaScript tillarini o'rganmoqdaman.
         </p>
         <div class="cards">
-            <!-- HTML Card -->
             <div class="card">
                 <div class="card-content">
                     <a href="https://doka.guide/html/">
@@ -50,7 +48,6 @@
                     </a>
                 </div>
             </div>
-            <!-- CSS Card -->
             <div class="card">
                 <div class="card-content">
                     <a href="https://doka.guide/c">
@@ -58,7 +55,6 @@
                     </a>
                 </div>
             </div>
-            <!-- JS Card -->
             <div class="card">
                 <div class="card-content">
                     <a href="https://doka.guide/js/">
@@ -69,47 +65,321 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2 class="title">Loyihalarim</h2>
         <div class="cards">
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5503/index.html"><img src="tizimga kirish.png" alt=""></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5501/index.html"><img src="sariq.png" alt=""></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5502/index.html"><img src="sanoq.png" alt=""></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5504/index.html"><img src="timer.png" alt=""></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5505/index.html"><img src="conkulator.png" alt=""></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5500/index.html"><img src="login.png" alt=""></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5507/index.html"><img src="tasodif.png" alt=""></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5508/index.html"><img src="assalom.png" alt=""></a></div></div>
+            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5503/index.html"><img src="tizimga kirish.png" alt="Tizimga kirish"></a></div></div>
+            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5501/index.html"><img src="sariq.png" alt="Sariq"></a></div></div>
+            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5503/index.html"><img src="sanoq.png" alt="Sanoq"></a></div></div>
+            <div class="card"><div class="card-content"><a href="https://portfolio-bilol-aba.netlify.app/   "><img src="timer.png" alt="Timer"></a></div></div>
+            <div class="card"><div class="card-content"><a href="https://kalkulator-bilolbek.netlify.app/"><img src="conkulator.png" alt="Kalkulyator"></a></div></div>
+            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5500/index.html"><img src="login.png" alt="Login"></a></div></div>
+            <div class="card"><div class="card-content"><a href="https://tasodif.netlify.app/"><img src="tasodif.png" alt="Tasodif"></a></div></div>
+            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5508/index.html"><img src="assalom.png" alt="Assalom"></a></div></div>
         </div>
     </section>
 
-    <!-- Family Section (Loyihalarim bilan bir xil qilindi) -->
-    <section id="family">
+            <section id="family">
         <h2 class="title">Oilam</h2>
         <p class="text">
-            Men oilamni judaham yaxshi ko'raman, biz oilada 10 kishimiz. Oilam mening eng katta motivatsiyamdir. 
-            Azim amakim, Jalol amakim, Gulhayo opam, Gulzoda opam, men Bilolbek, Muhammadali ukam, Imron ukam, Muhammad Umar ukam, Abdulloh ukam va Mustaffo ukam.
+            Men oilamni juda ham yaxshi ko'raman, biz oilada 10 kishimiz. Oilam mening eng katta motivatsiyamdir. 
+            Azim amakim, Jalol amakim, Gulhayo opam, Gulzoda opam, men Bilolbek, Muhammadali ukam, Imron ukam, Muhammad Umar ukam, Abdulloh ukam va Mustafo ukam.
         </p>
         <div class="cards">
-            <div class="card"><div class="card-content"><a href="https://web.telegram.org/a/#139669136"><img src="ailam/amakim .png" alt="Azim amakim"></a></div></div>
-            <div class="card"><div class="card-content"><a href="https://t.me/share/url?url=tel:+998904190010"><img src="ailam/jalol amkim .png" alt="Jalol amakim"></a></div></div>
-            <div class="card"><div class="card-content"><a href="/mnt/data/upscaled_image.png"><img src="ailam/muhammada ali.png" alt="Muhammadali"></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5504/index.html"><img src="ailam/imron mustaffo.png" alt="Imron"></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5505/index.html"><img src="ailam/umar.png" alt="Umar"></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5506/index.h"><img src="ailam/abdulloh.png" alt="Abdulloh"></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5507/index.html"><img src="ailam/mustafo.png" alt="Mustaffo"></a></div></div>
-            <div class="card"><div class="card-content"><a href="http://127.0.0.1:5508/index.html"><img src="assalom.png" alt="Oila"></a></div></div>
+            <div class="card friend-card">
+                <div class="name-tag">Azim amakim</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/a/#139669136"><img src="ailam/amakim .png" alt="Azim amakim"></a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">Jalol amakim</div>
+                <div class="card-content">
+                    <a href="https://t.me/share/url?url=tel:+998904190010"><img src="ailam/jalol amkim .png" alt="Jalol amakim"></a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">Muhammadali</div>
+                <div class="card-content">
+                    <a href="/mnt/data/upscaled_image.png"><img src="ailam/muhammada ali.png" alt="Muhammadali"></a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">Imron & Mustafo</div>
+                <div class="card-content">
+                    <a href="javascript:void(0);"><img src="ailam/imron mustaffo.png" alt="Imron va Mustafo"></a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">Muhammad Umar</div>
+                <div class="card-content">
+                    <a href="javascript:void(0);"><img src="ailam/umar.png" alt="Muhammad Umar"></a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">Abdulloh</div>
+                <div class="card-content">
+                    <a href="javascript:void(0);"><img src="ailam/abdulloh.png" alt="Abdulloh"></a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">Mustafo</div>
+                <div class="card-content">
+                    <a href="javascript:void(0);"><img src="ailam/mustafo.png" alt="Mustafo"></a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- School Section -->
     <section id="school">
-        <h2 class="title">Maktab Hayotim</h2>
+        <h2 class="title friend-title">Do'stlarim</h2>
         <div class="cards">
-            <div class="card"><div class="card-content"><h3>Olimpiadalar</h3></div></div>
-            <div class="card"><div class="card-content"><h3>Do‘stlarim</h3></div></div>
+            <div class="card friend-card">
+                <div class="name-tag">Yusufbek</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@Yusufix007">
+                        <img src="dostlarim/]x.png" alt="Yusufbek">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Abdulaziz</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@abdulaziz_sodiqjonov">
+                        <img src="dostlarim/abdulaz.png" alt="Abdulaziz">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Odiljon</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@Odil_3847">
+                        <img src="dostlarim/image.png" alt="Odiljon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Muhammadali</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@ymuhammadali">
+                        <img src="dostlarim/ali.png" alt="Muhammadali">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Habibulloh</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@qoronqu_abadimas">
+                        <img src="dostlarim/habi.png" alt="Habibulloh">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Abdulaziz</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@Voobshea">
+                        <img src="dostlarim/ship.png" alt="Abdulaziz">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Lazizbek</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@demurrryy">
+                        <img src="dostlarim/laziz.png" alt="Lazizbek">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Hojiakbar</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@hojiakbarrN1">
+                        <img src="dostlarim/hoji.png" alt="Hojiakbar">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Sarvar</div>
+                <div class="card-content">
+                    <a href="https://web.telegram.org/k/#@PowerVortex">
+                        <img src="dostlarim/sarvar.png" alt="Sarvar">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Alisher</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="dostlarim/alish.png" alt="Alisher">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section id="ustozlarim">
+        <h2 class="title friend-title">Ustozlarim</h2>
+        <div class="cards">
+            <div class="card friend-card">
+                <div class="name-tag">Otabek Xoshboqov</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/matem.png" alt="Otabek Xoshboqov">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Zoyidjon Nasriddinov</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/it.png" alt="Zoyidjon Nasriddinov">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Shahlo Doniyorova</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/ingiliz .png" alt="Shahlo Doniyorova">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Karimov Elyor</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/tarix.png" alt="Karimov Elyor">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Abdualiev Dilmurod</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/fizika .png" alt="Abdualiev Dilmurod">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Naima Roziyeva</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/naima.png" alt="Naima Roziyeva">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Ravshanov Azizbek</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/AHRANA .png" alt="Ravshanov Azizbek">
+                    </a>
+                </div>
+            </div>
+<div class="card friend-card">
+                <div class="name-tag">Hasanova Saodat </div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/oquv ishlari.png" alt="Ravshanov Azizbek">
+                    </a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">
+Xujaqulova Iroda </div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/uslubchi .png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card friend-card">
+                <div class="name-tag">Iroda Abduganiyeva</div>
+                <div class="card-content">
+                    <a href="">
+                        <img src="ustozlar/fima .png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="title">Men bilan bog'lanish</h2>
+        <p class="text">Savollaringiz yoki takliflaringiz bo'lsa, istalgan aloqa turi orqali menga to'g'ridan-to'g'ri yozishingiz mumkin!</p>
+        
+        <div class="cards">
+            <div class="card friend-card">
+                <div class="name-tag">Telegramdagi nomim</div>
+                <div class="card-content">
+                    <a href="https://t.me/ABA777711ABA" target="_blank">
+                        <div class="contact-icon">✈️</div>
+                    </a>
+                        <h2>@ABA777711ABA  </h2>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Telefon raqam</div>
+                <div class="card-content">
+                    <a href="tel:+998879512520">
+                        <div class="contact-icon">📞</div>
+                    </a>
+                    <h2>Murojaat uchun: +998 87 951 25 20</h2>
+                </div>
+            </div>
+
+            <div class="card friend-card">
+                <div class="name-tag">Elektron pochta</div>
+                <div class="card-content">
+                    <a href="mailto:abdunazarjoraev4@gmail.com">
+                        <div class="contact-icon">✉️</div>
+                    </a>
+                    <h2>abdunazarjoraev4 <br>   @gmail.com</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const textElement = document.getElementById('typing-text');
+        const message = "Assalomu alaykum va rahmatullohi va barakatuh";
+        let index = 0;
+
+        function typeEffect() {
+            if (index < message.length) {
+                textElement.textContent += message.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100); 
+            }
+        }
+
+        typeEffect();
+
+        const friendLinks = document.querySelectorAll('#school .card-content a, #family .card-content a');
+
+        friendLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                if (this.getAttribute('href') === '#' || this.getAttribute('href') === '') {
+                    event.preventDefault(); 
+                }
+            });
+        });
+    </script>
 </body>
 </html>
